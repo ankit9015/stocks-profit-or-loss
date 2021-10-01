@@ -28,10 +28,10 @@ function clickHandler() {
     const current = Number(currentPrice.value);
     const quantity = Number(stocksQuatity.value);
 
-    if(initial && current && quantity){
+    if(initial > 0 && current > 0 && quantity > 0){
         calculateProfitOrLoss(initial, quantity, current);
     } else {
-        alert('Please fill out all Fields');
+        alert('The Initial Price, Quantity, and Current Price cannot be negative. Please give valid inputs');
     }
     
 
