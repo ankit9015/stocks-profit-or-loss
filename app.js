@@ -12,7 +12,7 @@ function calculateProfitOrLoss(initial, quantity, current) {
         outputMessage.innerText = `You're makig a loss of Rs. ${loss} and the loss percentage is ${lossPercentage.toFixed(2)}%.`;
     } else if (initial < current) {
         var profit = (current - initial)*quantity;
-        var profitPercentage = (profit/(current*quantity)) * 100;
+        var profitPercentage = (profit/(initial*quantity)) * 100;
         outputMessage.style.color = "green";
         outputMessage.innerText = `You're makig a profit of Rs. ${profit} and the profit percentage is ${profitPercentage.toFixed(2)}%.`;
     } else {
